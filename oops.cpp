@@ -3,18 +3,41 @@
 // if we dont create a constructor compiler created default constructor
 // 3 rule
 // constructor is just a method but dont have a return type
-// constructor is same name as class name it beongs
+// constructor is same name as class name it belongs
 // constructor are a public but they can be private and protected
 #include <iostream>
 using namespace std;
 
 class employees
 {
-public:
+    private:
     string Name;
     string Company;
     int age; 
 
+    public:
+    void setName(string name){
+        Name = name;
+    }
+
+    string getName(){
+        return Name;
+    }
+
+    void setCompany(string company){
+        Company = company;
+    }
+
+    string getCompany(){
+        return Company;
+    }
+
+    void setAge(int age){
+        this->age = age;
+    }
+    int getAge(){
+        return age;
+    }
     void introduce(){
         std::cout<<"Name "<<Name << std::endl;
         std::cout<<"Company "<<Company << std::endl;
